@@ -1,0 +1,4 @@
+﻿/.idea/
+/plexure-text.sln.DotSettings.user
+**/bin/Debug/netcoreapp3.1/
+**/obj/

@@ -1,0 +1,167 @@
+﻿$color-purple: #532b6d;
+$color-blue: #3e91b0;
+$color-orange: #fdb443;
+$color-white: #fff;
+$color-green: #85c342;
+$color-border: #ececec;
+
+body {
+  background: #f3f3f4;
+  font-family: "Suisse-Thin", sans-serif;
+
+  .main {
+    padding: 0 2rem;
+    font-size: 1rem;
+
+    h1 {
+      color: #a4a4a4;
+      background: $color-white;
+    }
+
+    h2 {
+      color: #a4a4a4;
+      background: $color-white;
+    }
+
+    #left-nav-container {
+      width: 20rem;
+      position: fixed;
+      height: auto;
+      transition: all .4s ease 0s;
+      background: #fff;
+      border: solid 1px $color-border;
+
+      .quote-tool-header {
+        padding: 1rem;
+        background: $color-purple;
+        color: $color-white;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      #quote-tool-form {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        .quote-tool-submit {
+          color: $color-green;
+          display: block;
+          margin: auto;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .content {
+      display: block;
+      margin-left: 20rem;
+      border: solid 1px $color-border;
+      background: #fafafa;
+
+      .content-header {
+        padding: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .content-body {
+        padding: 1rem;
+
+        .purple {
+          .bg-theme {
+            background: $color-purple;
+            color: $color-white;
+          }
+
+          .text-theme {
+            color: $color-purple;
+          }
+        }
+
+        .blue {
+          .bg-theme {
+            background: $color-blue;
+            color: $color-white;
+          }
+
+          .text-theme {
+            color: $color-blue;
+          }
+        }
+
+        .orange {
+          .bg-theme {
+            background: $color-orange;
+            color: $color-white;
+          }
+
+          .text-theme {
+            color: $color-orange;
+          }
+        }
+
+        .loan-option {
+          background: #fff;
+          border: solid 1px $color-border;
+
+          .option-header {
+            padding: 0.5rem;
+          }
+
+          .option-body {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+
+          .text-bold, .text-theme {
+            font-weight: 500;
+          }
+
+          .sub-line {
+            color: #b7b7b7;
+          }
+
+          .center {
+            text-align: center;
+          }
+
+          .text-right {
+            text-align: right;
+          }
+        }
+
+        .content-sign-up-form {
+          text-align: center;
+          background: $color-white;
+          border: solid 1px $color-border;
+          padding: 1rem;
+
+          .form-wrapper {
+            text-align: left;
+
+            .btn {
+              width: 100%;
+
+              &.btn-primary, &.btn-primary:focus {
+                background: $color-green;
+                border-color: #f0f8e8;
+                text-transform: uppercase;
+              }
+            }
+
+            .sign-up-link {
+              color: $color-green;
+              text-align: center;
+              display: block;
+              text-transform: uppercase;
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

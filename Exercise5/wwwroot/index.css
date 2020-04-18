@@ -1,0 +1,128 @@
+body {
+  background: #f3f3f4;
+  font-family: "Suisse-Thin", sans-serif;
+}
+body .main {
+  padding: 0 2rem;
+  font-size: 1rem;
+}
+body .main h1 {
+  color: #a4a4a4;
+  background: #fff;
+}
+body .main h2 {
+  color: #a4a4a4;
+  background: #fff;
+}
+body .main #left-nav-container {
+  width: 20rem;
+  position: fixed;
+  height: auto;
+  transition: all 0.4s ease 0s;
+  background: #fff;
+  border: solid 1px #ececec;
+}
+body .main #left-nav-container .quote-tool-header {
+  padding: 1rem;
+  background: #532b6d;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body .main #left-nav-container #quote-tool-form {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+body .main #left-nav-container #quote-tool-form .quote-tool-submit {
+  color: #85c342;
+  display: block;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body .main .content {
+  display: block;
+  margin-left: 20rem;
+  border: solid 1px #ececec;
+  background: #fafafa;
+}
+body .main .content .content-header {
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body .main .content .content-body {
+  padding: 1rem;
+}
+body .main .content .content-body .purple .bg-theme {
+  background: #532b6d;
+  color: #fff;
+}
+body .main .content .content-body .purple .text-theme {
+  color: #532b6d;
+}
+body .main .content .content-body .blue .bg-theme {
+  background: #3e91b0;
+  color: #fff;
+}
+body .main .content .content-body .blue .text-theme {
+  color: #3e91b0;
+}
+body .main .content .content-body .orange .bg-theme {
+  background: #fdb443;
+  color: #fff;
+}
+body .main .content .content-body .orange .text-theme {
+  color: #fdb443;
+}
+body .main .content .content-body .loan-option {
+  background: #fff;
+  border: solid 1px #ececec;
+}
+body .main .content .content-body .loan-option .option-header {
+  padding: 0.5rem;
+}
+body .main .content .content-body .loan-option .option-body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+body .main .content .content-body .loan-option .text-bold, body .main .content .content-body .loan-option .text-theme {
+  font-weight: 500;
+}
+body .main .content .content-body .loan-option .sub-line {
+  color: #b7b7b7;
+}
+body .main .content .content-body .loan-option .center {
+  text-align: center;
+}
+body .main .content .content-body .loan-option .text-right {
+  text-align: right;
+}
+body .main .content .content-body .content-sign-up-form {
+  text-align: center;
+  background: #fff;
+  border: solid 1px #ececec;
+  padding: 1rem;
+}
+body .main .content .content-body .content-sign-up-form .form-wrapper {
+  text-align: left;
+}
+body .main .content .content-body .content-sign-up-form .form-wrapper .btn {
+  width: 100%;
+}
+body .main .content .content-body .content-sign-up-form .form-wrapper .btn.btn-primary, body .main .content .content-body .content-sign-up-form .form-wrapper .btn.btn-primary:focus {
+  background: #85c342;
+  border-color: #f0f8e8;
+  text-transform: uppercase;
+}
+body .main .content .content-body .content-sign-up-form .form-wrapper .sign-up-link {
+  color: #85c342;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */
