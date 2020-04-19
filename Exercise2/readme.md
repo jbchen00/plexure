@@ -8,21 +8,24 @@ See plexure-2.png for db design.
 select * from coupon where Now() between startDate and endDate
 
 `bool CanRedeemCoupon(userId, couponId)`
+select count(id) from redemption where couponId = $couponId and userId = $userId
+select maxPerUser, maxAllUsers from Coupon where id = $couponId
+return count < maxPerUser and count < maxAllUsers
 
 `void SaveRedemption(Coupon)`
 
 `List<Redemption> GetRedemptions(couponId, userId)`
-select * from redemptions where couponId = $couponId and userId = $userId
+select * from redemption where couponId = $couponId and userId = $userId
 
 **Optimizations on database**
 
-index on id, startDate desc, endDate desc on coupon table
+clustered index on id, startDate, endDate on coupon table
 
-index on id, couponId, userId on redemption table
+clustered index on id, couponId, userId (redemptionDateTime desc) on redemption table
 
 **Further optimization ideas that require more investigation**
 
-move cold data to another data store?
+move cold data to another data store. use Stretch Database.
 
 use caching, e.g. redis, to store active coupons.
 daily cron job to refresh cache for active coupons
