@@ -1,35 +1,32 @@
-﻿**coupon**
+﻿**Database design**
 
-id
-title
-startDate
-endDate
-maxPerUser
-maxAllUsers
+See plexure-2.png for db design.
 
-**redemption**
+**Functions**
 
-couponId(FK to Coupon.Id)
-userId(FK to User.Id)
-redeemedDateTime
-code
+`List<Coupon> GetActiveCouponList()`
+select * from coupon where Now() between startDate and endDate
 
+`bool CanRedeemCoupon(userId, couponId)`
 
-**Optimizations**
+`void SaveRedemption(Coupon)`
 
-use caching, e.g. redis, to store active coupons and redemption
-daily cron job to refresh cache for active coupons
+`List<Redemption> GetRedemptions(couponId, userId)`
+select * from redemptions where couponId = $couponId and userId = $userId
+
+**Optimizations on database**
+
+index on id, startDate desc, endDate desc on coupon table
+
+index on id, couponId, userId on redemption table
+
+**Further optimization ideas that require more investigation**
 
 move cold data to another data store?
 
-redeem
-get active coupon from redis
-redeem
-update redis
-update db
+use caching, e.g. redis, to store active coupons.
+daily cron job to refresh cache for active coupons
 
-getRedemptionCount
-redis key count?
+use nosql db for redemptions, e.g. cassandra
 
-index on id, startDate, endDate on coupon table
-index on couponId and userId on redemption table.
+use redis to store redemption count.

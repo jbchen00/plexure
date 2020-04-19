@@ -33,7 +33,7 @@ namespace Exercise4
         {
         }
 
-        public Task<long> GetDistanceAsync(long p, long p2)
+        public Task<double> GetDistanceAsync(double p, double p2)
         {
             throw new NotImplementedException();
         }
@@ -41,7 +41,7 @@ namespace Exercise4
 
     internal interface IDistanceCalculator
     {
-        Task<long> GetDistanceAsync(long p, long p2);
+        Task<double> GetDistanceAsync(double p, double p2);
     }
 
     internal interface IDataStore
